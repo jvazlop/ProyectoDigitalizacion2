@@ -54,12 +54,8 @@
 
 # IT y OT (tecnología en empresas)  
 
-## ¿Cómo puede tu software facilitar la integración entre entornos IT y OT? 
-- **Automatización**: Puede conectarse con bases de datos para actualizar las listas solo.  
-- **Accesibilidad**: Si estuviera en la nube, podrías ver tu lista desde cualquier dispositivo.  
-
 ## Si no aplica a IT u OT, ¿cómo podrías adaptarlo para mejorar procesos tecnológicos concretos? 
-- Haciendo una **app móvil** para sincronizar las listas.  
+- Haciendo una **app móvil** para sincronizar las listas. 
 
 ---
 
