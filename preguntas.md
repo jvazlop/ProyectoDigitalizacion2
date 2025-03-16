@@ -22,8 +22,10 @@
 
 ## Si no trabajas con datos, ¿cómo podrías incluir una funcionalidad que los gestione de forma eficiente?
 - Los datos los guardo en un fichero XML en local pero:
--- Podría **subir los datos a Google Drive o Firebase** para acceder desde cualquier lado.  
--- Usar **una base de datos online** para guardar las listas.  
+
+    Podría **subir los datos a Google Drive o Firebase** para acceder desde cualquier lado.
+
+    Usar **una base de datos online** para guardar las listas.  
 
 ---
 
