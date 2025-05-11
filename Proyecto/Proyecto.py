@@ -9,6 +9,10 @@ GEMINI_API_KEY = 'AIzaSyDGxsfH03G3mmZj0IfYyKuw_gAwkPWg6kI'
 GEMINI_API_URL = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}'
 
 # Función para buscar películas
+# /**
+#  * Busca una peli en la API de OMDb y muestra datos como el título o la descripción.
+#  * @param titulo El nombre de la película que el usuario escribe.
+#  */
 def buscar_pelicula(titulo):
     url = f"http://www.omdbapi.com/?t={titulo}&apikey={OMDB_API_KEY}"
     response = requests.get(url)
@@ -25,6 +29,10 @@ def buscar_pelicula(titulo):
         print("❌ No se encontró la película.")
 
 # Función para buscar libros con formato limpio
+# /**
+#  * Busca un libro en la API de Google Books y muestra los datos.
+#  * @param titulo El nombre del libro que el usuario quiere buscar.
+#  */
 def buscar_libro(titulo):
     url = GOOGLE_BOOKS_API_URL + titulo
     response = requests.get(url)
@@ -42,6 +50,11 @@ def buscar_libro(titulo):
         print("❌ No se encontró el libro.")
 
 # Función para registrar en XML
+# /**
+#  * Guarda en un archivo XML el tipo de ítem (libro o peli) con su título.
+#  * @param tipo Puede ser 'libro' o 'pelicula'.
+#  * @param titulo El nombre del ítem que se quiere guardar.
+#  */
 def registrar_en_xml(tipo, titulo):
     archivo = 'biblioteca.xml'
     root = ET.Element('biblioteca')
@@ -63,6 +76,10 @@ def registrar_en_xml(tipo, titulo):
 
 
 # Función para obtener recomendaciones con la API de Gemini
+# /**
+#  * Usa la API de Gemini para recomendar cosas parecidas a lo que ya añadiste.
+#  * @param tipo Tipo de recomendación: 'libro' o 'pelicula'.
+#  */
 def obtener_recomendaciones(tipo):
     items = cargar_datos_xml()
     if not items:
@@ -86,6 +103,10 @@ def obtener_recomendaciones(tipo):
         print("❌ Error al obtener recomendaciones:", response.status_code, response.text)
 
 # Función para cargar datos desde XML
+# /**
+#  * Carga los datos del archivo XML y los mete en una lista.
+#  * @return Una lista de tuplas con el tipo y título de cada ítem.
+#  */
 def cargar_datos_xml():
     archivo = 'biblioteca.xml'
     if os.path.exists(archivo):
@@ -98,6 +119,10 @@ def cargar_datos_xml():
     return []
 
 # Función para eliminar un libro o película
+# /**
+#  * Elimina un ítem de la lista guardada (ya sea libro o película).
+#  * @param tipo 'libro' o 'pelicula', según lo que se quiere borrar.
+#  */
 def eliminar_item(tipo):
     items = cargar_datos_xml()
     items_filtrados = [t for t in items if t[0] == tipo]
@@ -131,6 +156,9 @@ def eliminar_item(tipo):
         print("Error: Debes ingresar un número.")
 
 # Función principal
+# /**
+#  * Menú principal del programa. Desde aquí eliges qué hacer (buscar, añadir, etc).
+#  */
 def main():
     while True:
         print("\n📌 MENÚ PRINCIPAL")
