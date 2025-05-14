@@ -43,3 +43,14 @@ Introduce el título de la película: Interstellar
 ```
 
 ✅ The movie **Interstellar** has now been saved to your XML library.
+
+## Additional Resources
+
+- 📘 [Wiki](Wiki.md) – Learn how the system works internally and how to extend it.
+  
+- 📄 [License](License.md) – Review the terms and conditions (MIT License).
+
+- 🤝 [Contributing](Contributing.md) – Guidelines for contributing to this project.
+
+- 🎥 [Watch Demo Video](DEMO.mkv) - Is a Demo for see the program.
+  
